@@ -6,8 +6,13 @@ module.exports = {
     "overrides": [
         {
             "env": {
-                "node": true
+                "es6": true,
+                "browser": true,
+                "jest": true,
+                "worker": true,
+                "serviceworker": true
             },
+
             "files": [
                 ".eslintrc.{js,cjs}"
             ],
