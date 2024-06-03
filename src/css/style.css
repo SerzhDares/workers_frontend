@@ -7,7 +7,7 @@ h2 {
 }
 
 .news_window {
-  margin-top: 200px;
+  margin-top: 100px;
   margin-left: 37%;
   width: 400px;
   background-color: rgb(244, 247, 249);
@@ -40,6 +40,10 @@ h2 {
   background-color: rgb(181, 181, 181);
 }
 
+.news_container {
+  position: relative;
+}
+
 .news_item {
   margin-bottom: 15px;
 }
@@ -48,6 +52,7 @@ h2 {
   display: block;
   height: 20px;
   margin-bottom: 10px;
+  font-style: italic;
 }
 
 .news_item_image {
@@ -57,35 +62,33 @@ h2 {
   margin-bottom: 10px;
 }
 
+.image {
+  width: 80px;
+  height: 80px;
+}
+
 .news_item_text-name,
 .news_item_text-desc {
   display: block;
   height: 20px;
   width: 270px;
   margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 18px;
 }
 
-.news_item_date,
-.news_item_image,
-.news_item_text-name,
-.news_item_text-desc {
+.loading {
   background-color: rgb(181, 181, 181);
   position: relative;
   overflow-x: hidden;
-
 }
 
-.news_item_date:after,
-.news_item_image:after,
-.news_item_text-name:after,
-.news_item_text-desc:after {
+.loading:after {
   content: "";
   display: block;
   width: 50px;
   height: 200px;
-  /* margin-left: 50px; */
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
-  /* left: -40px; */
   top: -100px;
   z-index: 1;
   transform: rotate(20deg);
@@ -106,4 +109,18 @@ h2 {
     left: 110%;
     margin-left: 80px;
   }
+}
+
+.error {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-color: black;
+  opacity: 0.7;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
 }
